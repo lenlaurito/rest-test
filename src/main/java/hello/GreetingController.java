@@ -27,6 +27,8 @@ public class GreetingController {
 
     @RequestMapping(value = "/greeting", method = RequestMethod.POST)
     public Greeting createGreeting(@RequestBody Greeting greeting) {
+        System.out.println(greeting.getContent());
+        System.out.println(greeting.getId());
         return greeting;
     }
 
