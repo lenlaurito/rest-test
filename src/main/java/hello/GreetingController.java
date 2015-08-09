@@ -29,6 +29,7 @@ public class GreetingController {
     public Greeting createGreeting(@RequestBody Greeting greeting) {
         System.out.println(greeting.getContent());
         System.out.println(greeting.getId());
+        greetingMap.put(greeting.getId(), greeting);
         return greeting;
     }
 
